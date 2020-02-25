@@ -1,0 +1,15 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/migration?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: postgres
+    password: 1607
+    pool-size: 30
+
+
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
