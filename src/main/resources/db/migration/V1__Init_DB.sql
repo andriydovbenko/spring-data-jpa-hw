@@ -11,7 +11,7 @@ create table accounts
     last_name  varchar(255),
     city       varchar(255),
     gender     varchar(255),
-    username   varchar(255)
+    user_name   varchar(255)
 );
 
 create table profiles_table
@@ -19,7 +19,7 @@ create table profiles_table
     id         integer not null
         constraint profiles_pk
             primary key,
-    username   varchar(255) not null,
+    user_name   varchar(255) not null,
     job_title  varchar(255) not null,
     department varchar(255) not null,
     company    varchar(255) not null,

@@ -14,7 +14,7 @@ public class Profile {
     @Id
     private int id;
 
-    @Column(name = "username")
+    @Column(name = "user_name")
     private String userName;
 
     @Column(name = "job_title")

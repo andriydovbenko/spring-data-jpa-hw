@@ -9,12 +9,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class DemoApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(DemoApplication.class, args);
-        program(run);
+        ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+        startApp(context);
     }
 
-    static void program(ConfigurableApplicationContext run) {
-        Controller controller = run.getBean(Controller.class);
+    static void startApp(ConfigurableApplicationContext context) {
+        Controller controller = context.getBean(Controller.class);
         controller.executeSequenceOfCrudOperation();
     }
 }

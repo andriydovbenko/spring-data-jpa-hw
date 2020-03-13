@@ -16,6 +16,8 @@ public class Controller {
     private final ProfileService profileService;
     private Account account;
     private Profile profile;
+    private int accountCounter = 0;
+    private int profileCounter = 0;
 
     @Autowired
     public Controller(AccountService accountService, ProfileService profileService) {
@@ -57,10 +59,12 @@ public class Controller {
     }
 
     private void createAccountAndProfile() {
-        this.account = new Account(1001, "petro", "Petro",
+        this.account = new Account(accountCounter, "petro", "Petro",
                 "Kim", "Kiev", "male");
-        this.profile = new Profile(1001, "petro", "Technician",
+        accountCounter++;
+        this.profile = new Profile(profileCounter, "petro", "Technician",
                 "Engineering", "Centimia", "ZoomInfo");
+        profileCounter++;
     }
 
     private void removeAccountAndProfile() {

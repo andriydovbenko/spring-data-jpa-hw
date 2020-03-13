@@ -26,7 +26,7 @@ public class Account implements Serializable {
 
     private String gender;
 
-    @Column(name = "username")
+    @Column(name = "user_name")
     private String userName;
 
     @Getter(AccessLevel.NONE)
